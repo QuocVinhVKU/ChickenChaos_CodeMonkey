@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
         transform.position += moveDir * moveSpeed * Time.deltaTime;
 
-        isWalking = moveDir != Vector3.zero;
+        isWalking = (moveDir != Vector3.zero);
         //rotate player
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
